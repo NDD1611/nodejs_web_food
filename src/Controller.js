@@ -2,9 +2,9 @@ import mongoose from 'mongoose'
 import {Schema} from './database/schema.js'
 
 // GET  /
-// export function index (req, res){
-//         res.json("ok index")
-// }
+export function index (req, res){
+        res.json("ok index")
+}
 
 // GET /api_shop
 export function api_list_item(req, res){
