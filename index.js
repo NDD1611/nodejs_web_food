@@ -9,7 +9,7 @@ import route from './src/route.js'
 
 connect();
 
-app.user(cors())
+app.use(cors())
 
 //route
 route(app);
