@@ -3,7 +3,7 @@ import {index, api_list_item} from './Controller.js'
 
 function route(app){
     
-    app.get('/abc', (req, res)=>{
+    app.get('/', (req, res)=>{
         index(req, res)
     })
 
