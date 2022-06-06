@@ -1,4 +1,5 @@
 import express from 'express'
+import bodyParser from 'body-parser'
 const app = express()
 //const port = 4000
 import path from 'path'
@@ -12,7 +13,8 @@ import route from './src/route.js'
 // app.get('/', function (req, res) {
 //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });
-
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 connect();
 
@@ -25,4 +27,4 @@ route(app);
 //   console.log(`Example app listening on port ${port}`)
 // })
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 4000)

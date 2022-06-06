@@ -1,5 +1,6 @@
 
-import {index, api_list_item} from './Controller.js'
+import {index, api_list_item, login, register} from './Controller.js'
+
 
 function route(app){
     
@@ -9,6 +10,14 @@ function route(app){
 
     app.get('/api_shop', (req, res)=>{
         api_list_item(req, res)
+    })
+
+    app.post('/login', (req, res)=>{
+        login(req, res)
+    })
+
+    app.post('/register', (req, res)=>{
+        register(req, res)
     })
 }
 
