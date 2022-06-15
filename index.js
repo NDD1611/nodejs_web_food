@@ -20,11 +20,6 @@ connect();
 
 app.use(cors())
 
-//route
 route(app);
-
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`)
-// })
 
 app.listen(process.env.PORT || 4000)

@@ -8,7 +8,7 @@ function route(app){
         index(req, res)
     })
 
-    app.get('/api_shop', (req, res)=>{
+    app.get('/api/shop/All', (req, res)=>{
         api_list_item(req, res)
     })
 

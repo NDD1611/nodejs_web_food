@@ -1,5 +1,5 @@
-import mongoose from 'mongoose'
-import {listItemSchema, accountSchema} from './database/schema.js'
+
+import {getLists, accountModel} from "./model/model.js"
 
 // GET  /
 export function index (req, res){
@@ -8,7 +8,6 @@ export function index (req, res){
 
 // GET /api_shop
 export function api_list_item(req, res){
-    const getLists = mongoose.model('list_items', listItemSchema);
     getLists.find({}, (err, doc)=>{
         if(err){
             console.log(err)
@@ -19,7 +18,6 @@ export function api_list_item(req, res){
 }
 
 export function register(req, res){
-    const accountModel = mongoose.model('accounts', accountSchema);
     var user = req.body.username
     var pass =req.body.password
     var confirm = req.body.confirm
@@ -45,7 +43,6 @@ export function register(req, res){
 }
 
 export function login(req, res){
-    const accountModel = mongoose.model('accounts', accountSchema);
     var user = req.body.username
     var pass =req.body.password
     accountModel.findOne({
